@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{448E919B-952B-4B2A-ADDF-7D2C91CF7A3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OMSSigner</RootNamespace>
+    <AssemblyName>OMSSigner</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Админ\source\repos\OMSSigner-Published\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/OMSSigner/</UpdateUrl>
+    <PublisherName>Ky4ePoK</PublisherName>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>doc-sign32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>920C42A955D1639BCB9FF911BED0B43D59BEACC6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OMSSigner_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContainerHandler.cs" />
+    <Compile Include="EnumDropBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnumDropBox.Designer.cs">
+      <DependentUpon>EnumDropBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileHandlerBase.cs" />
+    <Compile Include="FileHandlersTreeRootComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileHandlersTreeRootComponent.Designer.cs">
+      <DependentUpon>FileHandlersTreeRootComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmMain.Designer.cs">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlerComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HandlerComponent.Designer.cs">
+      <DependentUpon>HandlerComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandlersComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HandlersComponent.Designer.cs">
+      <DependentUpon>HandlersComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinkedListEx.cs" />
+    <Compile Include="OMSRegistrSigner.cs" />
+    <Compile Include="PathSelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PathSelectionControl.Designer.cs">
+      <DependentUpon>PathSelectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignerHandlerProfileComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SignerHandlerProfileComponent.Designer.cs">
+      <DependentUpon>SignerHandlerProfileComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignerHandlerProfilesComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SignerHandlerProfilesComponent.Designer.cs">
+      <DependentUpon>SignerHandlerProfilesComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignModuleDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignModuleDialog.Designer.cs">
+      <DependentUpon>SignModuleDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IAssignable.cs" />
+    <Compile Include="IFileHandler.cs" />
+    <Compile Include="IModuleConfig.cs" />
+    <Compile Include="ISignModule.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signer.cs" />
+    <Compile Include="SignModule.cs" />
+    <Compile Include="SignModuleBase.cs" />
+    <Compile Include="SogazSignerModule.cs" />
+    <Compile Include="UIBinderAttribute.cs" />
+    <Compile Include="XmlAnything.cs" />
+    <None Include="OMSCertInstaller.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OMSCertMounter.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="OMSSigner_TemporaryKey.pfx" />
+    <None Include="Resources\add-icon-32.png" />
+    <None Include="Resources\delete-icon-32.png" />
+    <None Include="Resources\edit-icon-32.png" />
+    <Content Include="Resources\not_observe_32.png" />
+    <Content Include="Resources\settings32.png" />
+    <Content Include="Resources\doc-sign32.png" />
+    <Content Include="7z.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="7z.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="doc-sign32.ico" />
+    <Content Include="OMSCertMount.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\action-sign-32.png" />
+    <Content Include="Resources\action-sign-512.png" />
+    <Content Include="Resources\observe-32.png" />
+    <Content Include="settings32.png" />
+    <Content Include="tdhelper.vbs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="EnumDropBox.resx">
+      <DependentUpon>EnumDropBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileHandlersTreeRootComponent.resx">
+      <DependentUpon>FileHandlersTreeRootComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmMain.resx">
+      <DependentUpon>fmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlerComponent.resx">
+      <DependentUpon>HandlerComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandlersComponent.resx">
+      <DependentUpon>HandlersComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PathSelectionControl.resx">
+      <DependentUpon>PathSelectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignerHandlerProfileComponent.resx">
+      <DependentUpon>SignerHandlerProfileComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignerHandlerProfilesComponent.resx">
+      <DependentUpon>SignerHandlerProfilesComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignModuleDialog.resx">
+      <DependentUpon>SignModuleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\ISignModule.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="7-Zip.CommandLine">
+      <Version>18.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="ControlzEx">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="GostCryptography">
+      <Version>2.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="MailKit">
+      <Version>2.11.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="NLog.Config">
+      <Version>4.7.9</Version>
+    </PackageReference>
+    <PackageReference Include="RutokenAndCryptoproSigner">
+      <Version>0.1.12</Version>
+    </PackageReference>
+    <PackageReference Include="SevenZipSharp.Net45">
+      <Version>1.0.19</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
